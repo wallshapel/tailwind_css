@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Grid</title>
+	</head>
+	<body class="container mx-auto mt-5 text-center">
+		<!-- Queremos usar grid -->
+		<!-- Queremos incluir 3 columnas -->
+		<!-- Queremos que tenga una separación(solo entre columnas) de 4 -->
+		<div class="grid grid-cols-3 gap-4 mt-5">
+			<div class="bg-red-500">A</div>
+			<div class="bg-red-500">A</div>
+			<div class="bg-red-500">A</div>	
+			<div class="bg-red-500">C</div>	<!-- Esta columna no cabe, entonces se pone en una nueva fila y se le aplica gap-4 en sentido vertical con la anterior fila -->
+		</div>	
+		<!-- Puntos de quiebre -->
+		<div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-4">
+			<div class="bg-blue-500">A</div>
+			<div class="bg-blue-500">A</div>
+			<div class="bg-blue-500">A</div>	
+			<div class="bg-blue-500">A</div>
+		</div>	
+		<!-- Puntos de quiebre -->
+		<div class="grid grid-cols-4 gap-4 mt-4">
+			<div class="bg-pink-500 col-span-2">B</div> <!-- Esta columna abarcará 2 -->
+			<div class="bg-pink-500">A</div>
+			<div class="bg-pink-500">A</div>	
+			<div class="bg-pink-500 col-span-4">C</div> <!-- La columna `B` al abarcar dos columnas hace que esta columna `C` continue en la siguiente fila y podemos hacer que abarque las 4 columnas con otro `col-span` -->
+		</div>	
+		<!-- Ejemplo de como trabaja bootstrap -->
+		<div class="grid grid-cols-12 gap-1 mt-4">
+			<div class="bg-orange-500">A</div>
+			<div class="bg-orange-500">A</div>
+			<div class="bg-orange-500">A</div>
+			<div class="bg-orange-500">A</div>
+			<div class="bg-orange-500">A</div>
+			<div class="bg-orange-500">A</div>
+			<div class="bg-orange-500">A</div>
+			<div class="bg-orange-500">A</div>
+			<div class="bg-orange-500">A</div>
+			<div class="bg-orange-500">A</div>
+			<div class="bg-orange-500">A</div>
+			<div class="bg-orange-500">A</div>
+		</div>
+		<!-- Queremos un sistema de 3 columnas, pero con la grilla de 12 columnas -->
+		<div class="grid grid-cols-12 gap-1 mt-4">
+			<div class="bg-orange-500 col-span-4">A</div> <!-- 12 / 3 = 4. Por lo tanto cada columna debe abarcar 4 columnas -->
+			<div class="bg-orange-500 col-span-4">A</div>
+			<div class="bg-orange-500 col-span-4">A</div>
+		</div>
+		<!-- col-start -->
+		<div class="grid grid-cols-4 gap-4 mt-4 text-white">
+			<div class="bg-gray-500 col-start-2">B</div> <!-- Esta columna comienza desde la columna 2, dejando la primera columna en blanco -->
+			<div class="bg-gray-500 col-end-3">C</div> <!-- Esta columna termina donde comienza la columna 3 -->
+			<div class="bg-gray-500 col-end-2">D</div>	<!-- Esta columna termina donde comienza la columna 2 -->
+			<div class="bg-gray-500 col-start-3">A</div> <!-- Esta columna comienza donde comienza la coliumna 3 -->
+		</div>
+		<!-- Queremos una grilla de 4 filas -->
+		<div class="grid grid-rows-4 mt-4 gap-4">
+			<div class="bg-green-500 row-span-2">B</div> <!-- Esta fila abarcará 2 filas -->
+			<div class="bg-green-500">A</div>
+			<div class="bg-green-500">A</div>
+			<div class="bg-green-500">A</div>
+		</div>
+		<!-- Replicar la siguiente grilla
+
+			- - - - - - - - - - - - - - - - - -
+			-  a  - -  b  - -				  -
+			- - - - - - - - -		 e	      -
+			- - - - - - - - -				  -
+			-  c  - -  d  - -				  -
+			- - - - - - - - - - - - - - - - - -
+
+		 -->
+		 <div class="grid grid-cols-4 mt-4 gap-4">
+		 	<div class="bg-yellow-500">A</div>	
+		 	<div class="bg-yellow-500">B</div>	
+		 	<div class="bg-yellow-500 col-span-2 row-span-2">E</div>
+		 	<div class="bg-yellow-500">C</div>	
+		 	<div class="bg-yellow-500">D</div>	
+		 </div>
+
+		<!-- Tailwind CSS -->
+		<script src="https://cdn.tailwindcss.com"></script>	
+	</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tailwind CSS - CDN</title>
+	</head>
+	<body>
+		
+		<!-- Queremos dos botones -->
+		<!-- Que tenga un margin de 5 alrededor -->	
+		<div class="m-5">
+			<!-- Que sea de color azul -->
+			<!-- Que ante un hover el azul sea más oscuro -->
+			<!-- Que el texto se blanco -->
+			<!-- Que el texto esté en negrita -->
+			<!-- Que el texto esté separado de los bordes verticales y horizontales -->
+			<!-- Que las esquinas estén redondeadas -->
+			<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Blue button</button> <!-- Entre menor sea el valor numérico del color, el tono será más claro -->	
+			<!-- Queremos un botón similar al anterior pero con algunos puntos de quiebre -->
+			<!-- Que sea naranja cuando la pantalla sea mediana -->
+			<!-- Que su hover sea naranja más oscuro cuando la pantalla sea mediana -->
+			<!-- Que sea verde cuando la pantalla sea grande -->
+			<!-- Que su hover sea verde oscuro cuando la pantalla sea grande -->
+			<button class="bg-blue-500 md:bg-orange-400 lg:bg-green-500 hover:bg-blue-700 md:hover:bg-orange-600 lg:hover:bg-green-800 text-white font-bold py-2 px-4 rounded">Button with media queries</button>
+		</div>	
+
+		<!-- Queremos un div contenedor -->
+		<!-- Que esté centrado, o sea, que tenga el mismo margin a la izquierda y a la derecha -->
+		<!-- Que el contenido esté centrado -->
+		<div class="container mx-auto text-center">		
+			<h1 class="mt-5 text-green-500 text-5xl">This is a h1</h1>
+			<!-- Que esté alineado a la derecha -->
+			<!-- Que sea morado -->
+			<!-- Que el texto esté en negreita -->
+			<h2 class="text-right text-purple-500 font-bold text-4xl mt-5">This is a h2</h2>
+			<!-- Que el texto se convierta a mayúscula -->
+			<h3 class="uppercase mt-5 text-center text-blue-500 text-3xl">This is a h3</h3>
+			<!-- Que el texto se convierta a minúscula -->
+			<h4 class="lowercase mt-5 text-red-500 text-2xl">THIS IS A H4</h4>
+			<!-- Que el fondo sea de rosado -->
+			<!-- Que el contenido esté alineado a la izquierda -->
+			<!-- Que el texto esté en negrita -->
+			<!-- Que tenga pading de 5 alrededor -->
+			<h5 class="bg-pink-500 text-left text-white font-bold p-5 mt-5 text-xl">This is a h5</h5>
+			<!-- Que tenga bordes redondeados -->
+			<h6 class="rounded-xl bg-yellow-500 mt-5 text-lg font-bold">This is a h6</h6>		
+			<!-- Que tenga un ancho de 12rem -->
+			<!-- Que tenga sombra -->
+			<h6 class="shadow-xl bg-gray-500 mt-5 text-lg font-bold">This is a h6</h6>		
+		</div>
+
+		<!-- Queremos un parrafo dentro de un div que tenga espaciado de 5 alrededor -->
+		<!-- Que tenga un padding de 5 al rededor -->
+		<!-- Que tenga borde -->		
+		<div class="m-5 p-5 border">
+			<!-- Que el tamaño de fuente sea grandísimo en pantallas extra pequeñas -->
+			<!-- Que el tamaño de fuente sea extra grande en pantallas pequeñas -->
+			<!-- Que el tamaño de fuente sea grande en pantallas medianas -->
+			<!-- Que el tamaño de fuente sea mediano en pantallas grandes -->
+			<!-- Que el tamaño de fuente sea pequeño en pantallas extra grandes -->
+		    <p class="text-5xl sm:text-xl md:text-lg lg:text-md xl:text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et maiores iure pariatur reiciendis optio. A voluptas tenetur dolor quisquam, excepturi nihil. Ipsam, consequatur nihil, voluptate eos dolorem eius totam labore.</p>
+		</div>
+		
+		<!-- Tailwind CSS -->
+		<script src="https://cdn.tailwindcss.com"></script>
+
+	</body>
+</html>

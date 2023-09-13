@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Flexbox</title>
+	</head>
+	<body class="container mx-auto mt-5 text-center">
+		
+		<!-- Los div serán renderizados como elementos inline de izquiersa a derecha, comenzando por el primero hacia el último -->
+		<div class="flex flex-row mt-5"> <!-- `flex-row` viene por defecto -->
+			<div class="bg-orange-500 p-4 m-2">1</div>
+			<div class="bg-orange-500 p-4 m-2">2</div>
+			<div class="bg-orange-500 p-4 m-2">3</div>
+		</div>
+		<!-- Los div serán renderizados como elmementos inline de derecha a la izquierda, comenzando por el último hacia el primero -->
+		<div class="flex flex-row-reverse mt-5">
+			<div class="bg-orange-500 p-4 m-2">1</div>
+			<div class="bg-orange-500 p-4 m-2">2</div>
+			<div class="bg-orange-500 p-4 m-2">3</div>
+		</div>
+
+		<!-- Los div serán renderizados como elementos block de arriba a abajo, comenzando por el primero hacia el último -->
+		<div class="flex flex-col mt-5">
+			<div class="bg-red-500 p-4 m-2">1</div>
+			<div class="bg-red-500 p-4 m-2">2</div>
+			<div class="bg-red-500 p-4 m-2">3</div>
+		</div>
+		<!-- Los div serán renderizados como elementos block de arriba a abajo, comenzando por el último hacia el primero -->
+		<div class="flex flex-col-reverse mt-5">
+			<div class="bg-red-500 p-4 m-2">1</div>
+			<div class="bg-red-500 p-4 m-2">2</div>
+			<div class="bg-red-500 p-4 m-2">3</div>
+		</div>
+
+		<!-- Los div desde el último hacia el primero, se van ubicando en nuevas filas a medida que la pantalla se achica, en vez de hacerce más pequeños -->
+		<div class="flex flex-wrap text-5xl mt-5"> <!-- `flex-wrap-none` viene por defecto -->
+			<div class="bg-gray-500 p-5 m-2">First</div>
+			<div class="bg-gray-500 p-5 m-2">Second</div>
+			<div class="bg-gray-500 p-5 m-2">Third</div>
+		</div>
+		<!-- Los div desde el primero hacia el último, se van ubicando en nuevas filas a medida que la pantalla se achica, en vez de hacerce más pequeños -->
+		<div class="flex flex-wrap-reverse text-5xl mt-5">
+			<div class="bg-gray-500 p-5 m-2">First</div>
+			<div class="bg-gray-500 p-5 m-2">Second</div>
+			<div class="bg-gray-500 p-5 m-2">Third</div>
+		</div>
+
+		<!-- Centra los div en el eje horizontal -->
+		<div class="flex justify-center mt-5"> <!-- `justify-start` viene por defecto -->
+			<div class="bg-yellow-500 p-5 m-2">1</div>
+			<div class="bg-yellow-500 p-5 m-2">2</div>
+			<div class="bg-yellow-500 p-5 m-2">3</div>
+		</div>
+		<!-- Alinea los div de manera uniforme, con el mismo espacio entre ellos, sin agregar espacio en los extremos -->
+		<div class="flex justify-between mt-5">
+			<div class="bg-yellow-500 p-5 m-2">1</div>
+			<div class="bg-yellow-500 p-5 m-2">2</div>
+			<div class="bg-yellow-500 p-5 m-2">3</div>
+		</div>
+		<!-- Alinea los div de manera uniforme, con el mismo espacio entre ellos, pero agregando espacio en los extremos para no tocarlos -->
+		<div class="flex justify-around mt-5">
+			<div class="bg-yellow-500 p-5 m-2">1</div>
+			<div class="bg-yellow-500 p-5 m-2">2</div>
+			<div class="bg-yellow-500 p-5 m-2">3</div>
+		</div>
+		<!-- Alinea los div de manera uniforme, con el mismo espacio entre ellos, incluyendo el espacio en los extremos -->
+		<div class="flex justify-evenly mt-5">
+			<div class="bg-yellow-500 p-5 m-2">1</div>
+			<div class="bg-yellow-500 p-5 m-2">2</div>
+			<div class="bg-yellow-500 p-5 m-2">3</div>
+		</div>
+		<!-- Usando `grid` queremos una grilla de 3 columnas -->
+		<!-- Queremos que los div se alíneen de manera uniforme, con el mismo espacio entre ellos, dejando espacio en los extremos, pero que los div ocupen el mayor espacio posible -->
+		<div class="grid grid-cols-3 justify-items-stretch bg-blue-500 mt-5">
+			<div class="bg-yellow-500 p-5 m-2">1</div>
+		  	<div class="bg-yellow-500 p-5 m-2">2</div>
+		  	<div class="bg-yellow-500 p-5 m-2">3</div>
+		</div>
+
+		<!-- Establecemos un alto en el contenedor padre -->
+		<!-- Cada hijo tiene su propia altura. Sin exceder la altura del padre -->
+		<!-- La base de los div se ubica arriba -->
+		<div class="flex items-start h-28 bg-red-500 mt-5"> <!-- `items-stretch` viene por defecto, y los div no pueden llevar altura establecida -->
+			<div class="bg-purple-500 p-5 m-2 h-10">1</div>
+			<div class="bg-purple-500 p-5 m-2 h-14">2</div>
+			<div class="bg-purple-500 p-5 m-2 h-8">3</div>
+		</div>
+		<!-- La base de los div se ubica abajo -->
+		<div class="flex items-end h-28 bg-red-500 mt-5">
+			<div class="bg-purple-500 p-5 m-2 h-10">1</div>
+			<div class="bg-purple-500 p-5 m-2 h-14">2</div>
+			<div class="bg-purple-500 p-5 m-2 h-8">3</div>
+		</div>
+		<!-- El eje central horizonal de los div coincide con el eje central horizontal del contenedor padre -->
+		<div class="flex items-center h-28 bg-red-500 mt-5">
+			<div class="bg-purple-500 p-5 m-2 h-10">1</div>
+			<div class="bg-purple-500 p-5 m-2 h-14">2</div>
+			<div class="bg-purple-500 p-5 m-2 h-8">3</div>
+		</div>
+
+		<!-- Establecemos un alto en el contenedor padre -->
+		<!-- Para el segundo div, su eje central horizontal coincide con el eje central horizontal del contenedor padre -->
+		<!-- La base del tercer div se ubica en la base del contenedor padre -->
+		<div class="flex items-start h-28 bg-green-500 mt-5">
+			<div class="bg-pink-500 p-5 m-2">1</div> <!-- `self-start` viene por defecto -->
+			<div class="self-center bg-pink-500 p-5 m-2">2</div>
+			<div class="self-end bg-pink-500 p-5 m-2">3</div>
+		</div>
+		<!-- El div 2 ocupara más espacio que los div que no tienen `flex-1`. El div 2 ocupará el mayor espacio posible en el contenedor -->
+		<div class="flex items-start h-28 bg-green-500 mt-5">
+			<div class="bg-pink-500 p-5 m-2">1</div> <!-- `self-start` viene por defecto -->
+			<div class="flex-1 bg-pink-500 p-5 m-2">Lorem ipsum, dolor sit.</div>
+			<div class="bg-pink-500 p-5 m-2">3</div>
+		</div>
+		<!-- Tailwind CSS -->
+		<script src="https://cdn.tailwindcss.com"></script>	
+	</body>
+</html>
